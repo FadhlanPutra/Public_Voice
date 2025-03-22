@@ -1,3 +1,43 @@
+# Proses Cloning dan Instalasi
+### 1. Clone Repository
+Untuk meng-clone repository ini, buka terminal dan jalankan perintah berikut:
+```bash
+git clone https://github.com/username/pengaduanSiswa.git
+```
+
+Setelah proses cloning selesai, ubah nama folder menjadi pengaduanSiswa1:
+```bash
+mv pengaduanSiswa pengaduanSiswa1
+```
+
+### 2. Konfigurasi .env
+Jika file .env berbentuk .env.example maka ubah dengan .env lalu jalankan perintah
+```bash
+php artisan migrate
+```
+
+### 3. Instalasi dependensi
+Instal seluruh dependensi aplikasi yang diperlukan untuk backend dan frontend.
+```bash
+composer install
+npm install
+```
+
+### 4. Generate App Key
+Generate app key untuk Laravel:
+```bash
+php artisan key:generate
+```
+
+### 5. Menjalankan Aplikasi
+Jalankan aplikasi menggunakan perintah berikut:
+```bash
+php artisan serve
+npm run dev
+```
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
