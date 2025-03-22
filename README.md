@@ -2,12 +2,12 @@
 ### 1. Clone Repository
 Untuk meng-clone repository ini, buka terminal dan jalankan perintah berikut:
 ```bash
-git clone https://github.com/username/pengaduanSiswa.git
+git clone https://github.com/FadhlanPutra/Public_Voice.git
 ```
 
-Setelah proses cloning selesai, ubah nama folder menjadi pengaduanSiswa1:
+Setelah proses cloning selesai, ubah nama folder menjadi PublicVoice1:
 ```bash
-mv pengaduanSiswa pengaduanSiswa1
+mv PublicVoice PublicVoice1
 ```
 
 ### 2. Konfigurasi .env
