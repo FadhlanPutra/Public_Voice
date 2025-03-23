@@ -4,12 +4,12 @@
         <div class="flex flex-col me-1 dark:text-white">
             <div class='p-4 dark:bg-black rounded-xl border-black shadow-lg'>
                 <div class='flex flex-col lg:flex-row gap-8  justify-center'>
-                    <img src="/aset/library.webp" alt="logo Library" class='w-full max-w-md' loading="lazy"/>
+                    <img src="storage/images/image_dashboard.png" alt="Gambar Dashboard" class='w-full max-w-md' loading="lazy"/>
                     <div class='flex flex-col justify-center gap-4 lg:w-1/2'>
                         <h1 class='font-extrabold text-2xl'>Selamat Pagi, {{ Auth::user()->name }}!</h1>
-                        <p>Selamat datang di Dashboard Library Pesat! Di sini, Anda dapat melihat buku-buku yang tersedia untuk dipinjam, memantau status peminjaman Anda, dan mengelola riwayat peminjaman dengan mudah. Nikmati pengalaman peminjaman buku yang lebih mudah dan efisien, dan pastikan Anda selalu mendapatkan buku favorit Anda!</p>
+                        <p>Terima kasih telah menjadi bagian dari Public Voice. Peran Anda sangat penting dalam memastikan setiap pengaduan masyarakat dikelola dengan cepat, transparan, dan tepat sasaran. Gunakan panel admin ini untuk memantau, menanggapi, dan menindaklanjuti setiap laporan yang masuk.</p>
                     
-                    @if(Auth::user()->role == 'admin')    
+                    @if(Auth::user()->role == 'petugas')    
                         <div class='flex lg:gap-5 max-sm:justify-between'>
                             <a href="">
                                 <button href='#' class='p-3 px-6 bg-gray-300 rounded-full text-black'>Lihat Laporan</button>

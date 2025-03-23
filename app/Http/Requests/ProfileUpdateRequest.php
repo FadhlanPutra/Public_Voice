@@ -17,6 +17,11 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
+            'nik' => ['required', 'string', 'max:20', 'regex:/^\d+$/'],
+            'number_phone' => ['required', 'string', 'max:20', 'regex:/^\d+$/'],
+            'tanggal_lahir' => ['required', 'date'], 
+            'gender' => ['required', 'string', 'in:a,b'], // Hanya opsi "a" dan "b"
+            'disabilitas' => ['required', 'string', 'in:ya,tidak'], // Hanya opsi "ya" dan "tidak"
             'email' => [
                 'required',
                 'string',

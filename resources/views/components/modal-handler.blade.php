@@ -48,17 +48,20 @@
                             </label>
                         </div>
                     
-                        <div class="flex items-center justify-end mt-4">
+                        <div class="flex items-center justify-between mt-4">
+                            <a class="underline text-sm hover:cursor-pointer text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" data-modal-hide="modal-Login" data-modal-target="modal-Register" data-modal-toggle="modal-Register">
+                                {{ __('Dont have an Account?') }}
+                            </a>
                             @if (Route::has('password.request'))
                                 <a class="underline text-sm hover:cursor-pointer text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" data-modal-hide="modal-Login" data-modal-target="modal-Forgot" data-modal-toggle="modal-Forgot">
                                     {{ __('Forgot your password?') }}
                                 </a>
                             @endif
                             
-                            <x-primary-button class="ms-3">
+                        </div>
+                            <x-primary-button class="ms-3 justify-center w-full mt-4">
                                 {{ __('Log in') }}
                             </x-primary-button>
-                        </div>
                     </form>
                 </div>
             </div>
@@ -165,8 +168,8 @@
                         <span class="sr-only">Close modal</span>
                     </button>
                 </div>
-                <p>
-                    Masukkan alamat Email/No. Telp anda, kami akan mengirimkan alamat untuk mereset password anda melalui Email/No. Telp anda.
+                <p class="mx-5">
+                    Masukkan alamat Email anda, kami akan mengirimkan alamat untuk mereset password anda melalui Email anda.
                 </p>
                 <!-- Modal body -->
                 <div class="p-4 md:p-5 space-y-4">

@@ -47,6 +47,45 @@
             @endif
         </div>
 
+        <div>
+            <x-input-label for="nik" :value="__('NIK')" />
+            <x-text-input id="nik" name="nik" type="number" class="mt-1 block w-full" :value="old('nik', $user->nik)" required autofocus autocomplete="nik" />
+            <x-input-error class="mt-2" :messages="$errors->get('nik')" />
+        </div>
+
+        <div>
+            <x-input-label for="number_phone" :value="__('Nomor Telepon')" />
+            <x-text-input id="number_phone" name="number_phone" type="number" class="mt-1 block w-full" :value="old('number_phone', $user->number_phone)" required autofocus autocomplete="number_phone" />
+            <x-input-error class="mt-2" :messages="$errors->get('number_phone')" />
+        </div>
+
+        <div>
+            <x-input-label for="tanggal_lahir" :value="__('Tanggal Lahir')" />
+            <x-text-input id="tanggal_lahir" name="tanggal_lahir" type="date" class="mt-1 block w-full" :value="old('tanggal_lahir', $user->tanggal_lahir)" required autofocus autocomplete="tanggal_lahir" />
+            <x-input-error class="mt-2" :messages="$errors->get('tanggal_lahir')" />
+        </div>
+
+        <div>
+            <x-input-label for="gender" :value="__('Gender')" />
+            <select id="gender" name="gender" class="mt-1 block w-full" required autofocus>
+                <option value="" {{ old('gender', $user->gender ?? '') == '' ? 'selected' : '' }}>Belum diisi</option>
+                <option value="a" {{ old('gender', $user->gender ?? '') == 'a' ? 'selected' : '' }}>A</option>
+                <option value="b" {{ old('gender', $user->gender ?? '') == 'b' ? 'selected' : '' }}>B</option>
+            </select>
+            <x-input-error class="mt-2" :messages="$errors->get('gender')" />
+        </div>
+        
+        <div>
+            <x-input-label for="disabilitas" :value="__('Disabilitas')" />
+            <select id="disabilitas" name="disabilitas" class="mt-1 block w-full" required autofocus>
+                <option value="" {{ old('disabilitas', $user->disabilitas ?? '') == '' ? 'selected' : '' }}>Belum diisi</option>
+                <option value="ya" {{ old('disabilitas', $user->disabilitas ?? '') == 'ya' ? 'selected' : '' }}>Ya</option>
+                <option value="tidak" {{ old('disabilitas', $user->disabilitas ?? '') == 'tidak' ? 'selected' : '' }}>Tidak</option>
+            </select>
+            <x-input-error class="mt-2" :messages="$errors->get('disabilitas')" />
+        </div>
+
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
