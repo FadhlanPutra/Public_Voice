@@ -11,21 +11,25 @@ Alpine.start();
 
 // Elemen select dan body
 var themeSelector = document.getElementById("theme-selector");
+const iconDisplay = document.getElementById('icon-display');
 
-// Fungsi untuk menerapkan tema berdasarkan pilihan
+
+// Fungsi untuk menerapkan tema dengan transisi
 function applyTheme(theme) {
+    const htmlElement = document.documentElement;
+    
     if (theme === "dark") {
-        document.documentElement.classList.add("dark");
+        htmlElement.classList.add("dark");
         localStorage.setItem("color-theme", "dark");
     } else if (theme === "light") {
-        document.documentElement.classList.remove("dark");
+        htmlElement.classList.remove("dark");
         localStorage.setItem("color-theme", "light");
     } else {
         localStorage.removeItem("color-theme");
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            document.documentElement.classList.add("dark");
+            htmlElement.classList.add("dark");
         } else {
-            document.documentElement.classList.remove("dark");
+            htmlElement.classList.remove("dark");
         }
     }
 }
@@ -57,5 +61,14 @@ window
         }
     });
 
+// ICON PICKER
+themeSelector.addEventListener('change', (event) => {
+    const selectedOption = themeSelector.options[themeSelector.selectedIndex];
+    const iconClass = selectedOption.dataset.icon;
+    iconDisplay.className = `fas ${iconClass}`;
+});
 
+// Initialize with the first icon
+const initialOption = themeSelector.options[themeSelector.selectedIndex];
+iconDisplay.className = `fas ${initialOption.dataset.icon}`;
 

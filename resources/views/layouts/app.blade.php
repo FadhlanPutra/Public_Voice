@@ -43,15 +43,15 @@
                 <div class="flex flex-row justify-between gap-6 items-center px-4 sm:px-6 lg:px-4 xl:pl-64 md:pl-32 drop-shadow-md">
                     @if (Auth::user()->role == 'admin')    
                         <form method="GET" action="">
-                            <input id="search" name="search" type="text" class="text-black rounded-lg border-gray-500 focus:ring-opacity-50" placeholder="Cari Laporan...">
+                            <input id="search" name="search" type="text" class="text-black rounded-lg border-gray-500 focus:ring-opacity-50 dark:bg-gray-700 dark:placeholder-white" placeholder="Cari Laporan...">
                         </form> 
                     @elseif (Auth::user()->role == 'petugas')
                         <form method="GET" action="">
-                            <input id="search" name="search" type="text" class="text-black rounded-lg border-gray-500 focus:ring-opacity-50" placeholder="Cari Laporan...">
+                            <input id="search" name="search" type="text" class="text-black rounded-lg border-gray-500 focus:ring-opacity-50 dark:bg-gray-700 dark:placeholder-white" placeholder="Cari Laporan...">
                         </form>
                     @elseif (Auth::user()->role == 'user')
                         <form method="GET" action="">
-                            <input id="search" name="search" type="text" class="text-black rounded-lg border-gray-500 focus:ring-opacity-50" placeholder="Cari Laporan...">
+                            <input id="search" name="search" type="text" class="text-black rounded-lg border-gray-500 focus:ring-opacity-50 dark:bg-gray-700 dark:placeholder-white" placeholder="Cari Laporan...">
                         </form>
                     @endif
 

@@ -5,7 +5,7 @@
         </h2>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __("Update your account's profile information") }}
         </p>
     </header>
 
@@ -67,7 +67,7 @@
 
         <div>
             <x-input-label for="gender" :value="__('Gender')" />
-            <select id="gender" name="gender" class="mt-1 block w-full" required autofocus>
+            <select id="gender" name="gender" class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autofocus>
                 <option value="" {{ old('gender', $user->gender ?? '') == '' ? 'selected' : '' }}>Belum diisi</option>
                 <option value="a" {{ old('gender', $user->gender ?? '') == 'a' ? 'selected' : '' }}>A</option>
                 <option value="b" {{ old('gender', $user->gender ?? '') == 'b' ? 'selected' : '' }}>B</option>
@@ -77,7 +77,7 @@
         
         <div>
             <x-input-label for="disabilitas" :value="__('Disabilitas')" />
-            <select id="disabilitas" name="disabilitas" class="mt-1 block w-full" required autofocus>
+            <select id="disabilitas" name="disabilitas" class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autofocus>
                 <option value="" {{ old('disabilitas', $user->disabilitas ?? '') == '' ? 'selected' : '' }}>Belum diisi</option>
                 <option value="ya" {{ old('disabilitas', $user->disabilitas ?? '') == 'ya' ? 'selected' : '' }}>Ya</option>
                 <option value="tidak" {{ old('disabilitas', $user->disabilitas ?? '') == 'tidak' ? 'selected' : '' }}>Tidak</option>
