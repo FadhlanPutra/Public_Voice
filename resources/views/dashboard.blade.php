@@ -18,7 +18,7 @@ if ($jam >= 0 && $jam < 12) {
         <div class="flex flex-col me-1 dark:text-white">
             <div class='p-4 dark:bg-black rounded-xl border-black shadow-lg'>
                 <div class='flex flex-col lg:flex-row gap-8  justify-center'>
-                    <img src="storage/images/image_dashboard.png" alt="Gambar Dashboard" class='w-full max-w-md' loading="lazy"/>
+                    <img src="aset/image_dashboard.png" alt="Gambar Dashboard" class='w-full max-w-md' loading="lazy"/>
                     <div class='flex flex-col justify-center gap-4 lg:w-1/2'>
                         <h1 class='font-extrabold text-2xl'>Selamat {{$salam}}, {{ Auth::user()->name }}!</h1>
                         <p>Terima kasih telah menjadi bagian dari Public Voice. Peran Anda sangat penting dalam memastikan setiap pengaduan masyarakat dikelola dengan cepat, transparan, dan tepat sasaran. Gunakan panel admin ini untuk memantau, menanggapi, dan menindaklanjuti setiap laporan yang masuk.</p>

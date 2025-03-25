@@ -29,7 +29,7 @@
     
     <!-- Hero Section -->
     <div class="flex flex-row items-center mb-10 mx-5 mt-5" id="beranda">
-        <img src="storage/images/fff.png" alt="gambar" class="w-1/2 h-auto rounded-md shadow-md mb-6 mr-20">
+        <img src="aset/fff.png" alt="gambar" class="w-1/2 h-auto rounded-md shadow-md mb-6 mr-20">
         
         <div class="text-center w-50%">
             <h2 class="text-2xl font-bold mb-2 text-orange-500">Public Voice</h2>
@@ -63,7 +63,7 @@
     <!-- About Section -->
     <div class="mx-5" id="tentang">
         <div class="flex flex-row items-center mb-10">
-            <img src="storage/images/apa-itu.png" alt="Apa Itu Public Voice?" class="w-1/2 h-auto rounded-md shadow-md mb-6 mr-20">
+            <img src="aset/apa-itu.png" alt="Apa Itu Public Voice?" class="w-1/2 h-auto rounded-md shadow-md mb-6 mr-20">
 
             <div class="text-center w-50%">
                 <h4 class="text-2xl font-bold text-orange-500">Apa itu Public Voice?</h4>
@@ -77,7 +77,7 @@
                 <p class="text-gray-600 mt-2"><span>Public Voice</span> adalah solusi inovatif untuk pengaduan masyarakat yang cepat, transparan, dan akuntabel. Dengan sistem real-time yang mudah digunakan, setiap laporan mendapat tindak lanjut yang tepat. Keamanan data terjamin, memastikan kerahasiaan pengaduan. <span>Public Voice</span> memberi kekuatan bagi setiap suara untuk mendorong perubahan nyata dan menciptakan lingkungan yang lebih baik.</p>
             </div>
 
-            <img src="storage/images/mengapa-harus.png" alt="Mengapa Harus Public Voice?" class="w-1/2 h-auto rounded-md shadow-md mb-6 ml-20">
+            <img src="aset/mengapa-harus.png" alt="Mengapa Harus Public Voice?" class="w-1/2 h-auto rounded-md shadow-md mb-6 ml-20">
         </div>
     </div>
 
