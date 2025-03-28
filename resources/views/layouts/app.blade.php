@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <script>
+            (function() {
+              // Gunakan key "color-theme" untuk konsistensi
+              const theme = localStorage.getItem('color-theme');
+              const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+              const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+              if (theme === 'light' || (!theme && systemPrefersLight)) {
+                document.documentElement.classList.add('light');
+                document.documentElement.classList.remove('dark');
+              } else if (theme === 'dark' || (!theme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+              } else {
+                // Jika tidak ada preferensi, default ke light (atau dark sesuai keinginan)
+                document.documentElement.classList.add('light');
+                document.documentElement.classList.remove('dark');
+              }
+            })();
+        </script>
+
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="icon" href="{{ asset('aset/buku.webp') }}" type="image/x-icon">
+        {{-- <link rel="icon" href="{{ asset('aset/buku.webp') }}" type="image/x-icon"> --}}
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
         <title>Public Voice {{ucfirst(Auth::user()->role)}}</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/darkMode.js'])
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+        {{-- @include('components.dark-mode-script') --}}
+
+        
+
     </head>
     <body class="font-sans antialiased">
             
@@ -31,7 +54,7 @@
             if ($jam >= 6 && $jam < 18) {
                 $icon = '<i id="theme-toggle-icon" class="fas fa-sun pt-1"></i>';
             } else {
-                $icon = '<i id="theme-toggle-icon" class="fa-solid fa-moon pt-1"></i>';
+                $icon = '<i id="theme-toggle-icon" class="fa-solid fa-moon pt-1 sm:hidden"></i>';
             }
             @endphp
         
@@ -40,7 +63,7 @@
 
             <nav class="bg-white dark:text-white border-gray-200 p-4 dark:bg-gray-800 drop-shadow-lg">
                 
-                <div class="flex flex-row justify-between gap-6 items-center px-4 sm:px-6 lg:px-4 xl:pl-64 md:pl-32 drop-shadow-md">
+                <div class="flex flex-row justify-between gap-4 lg:gap-6 items-center px-4 sm:px-6 lg:px-4 md2:pl-64 lg:pl-64 md:pl-64 drop-shadow-md">
                     @if (Auth::user()->role == 'admin')    
                         <form method="GET" action="">
                             <input id="search" name="search" type="text" class="text-black rounded-lg border-gray-500 focus:ring-opacity-50 dark:bg-gray-700 dark:placeholder-white" placeholder="Cari Laporan...">
@@ -56,7 +79,7 @@
                     @endif
 
 
-                    <div class="flex flex-row gap-4">
+                    <div class="md:flex flex-row gap-4 sm:text-sm hidden">
                         <p>{{ $waktu }}</p>
                         <i class="fa-regular fa-calendar pt-1"></i>
                         {!! $icon !!}
@@ -78,7 +101,6 @@
                 {{ $slot }}
             </main>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
@@ -103,9 +125,6 @@
 
 
     document.addEventListener('click', function (e) {
-    // Cek jika elemen yang diklik memiliki kelas 'confirm-button'
-    // if (e.target.classList.contains('confirm-button')) {
-    //     e.preventDefault(); // Mencegah aksi default tombol
 
     const confirmButton = e.target.closest('.confirm-button');
     if (confirmButton) {

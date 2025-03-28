@@ -8,4 +8,9 @@
 @plugin "flowbite/plugin";
 @source "../../node_modules/flowbite";
 
-
+@custom-variant dark (&:where(.dark, .dark *));
+html {
+    scroll-behavior: smooth;
+    background-color: #1f2937;
+    transition: background-color 0.3s ease;
+}

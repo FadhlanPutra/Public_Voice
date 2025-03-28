@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class PetugasSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +15,10 @@ class PetugasSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'petugas',
-            'email' => 'petugas@gmail.com',
-            'password' => Hash::make('petugas123@@@'),
-            'role' => 'petugas',
+            'name' => 'user',
+            'email' => 'user@gmail.com',
+            'password' => Hash::make('user123@@@'),
+            'role' => 'user',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

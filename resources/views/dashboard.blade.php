@@ -13,7 +13,7 @@ if ($jam >= 0 && $jam < 12) {
 @endphp
 
 <x-app-layout>
-    <section class="bg-white dark:bg-gray-900 lg:pl-64 mx-3 pt-5">
+    <section class="bg-white dark:bg-gray-900 md2:pl-64 lg:pl-64 md:pl-64 mx-3 pt-5">
     
         <div class="flex flex-col me-1 dark:text-white">
             <div class='p-4 dark:bg-black rounded-xl border-black shadow-lg'>
@@ -26,19 +26,19 @@ if ($jam >= 0 && $jam < 12) {
                     @if(Auth::user()->role == 'petugas')    
                         <div class='flex lg:gap-5 max-sm:justify-between'>
                             <a href="">
-                                <button href='#' class='p-3 px-6 bg-gray-300 rounded-full text-black'>Lihat Laporan</button>
+                                <button href='#' class='p-2 px-6 bg-gray-300 rounded-full text-black'>Lihat Laporan</button>
                             </a>
                         </div>
                     
     
-                    @elseif(Auth::user()->role == 'anggota')
+                    @elseif(Auth::user()->role == 'user')
                         <div class='flex lg:gap-5 max-sm:justify-between'>
-                            <a href="">
-                                <button href='#' class='p-3 px-6 bg-gray-300 rounded-full text-black'>Lihat Riwayat</button>
+                            <a href={{ route('users.create') }}>
+                                <button class='p-2 px-6 bg-gray-300 rounded-full text-black'>Buat Laporan</button>
                             </a>
     
-                            <a href="">
-                                <button class='p-3 px-6 bg-[#A78E51] rounded-full'>Pinjam Buku</button>
+                            <a href={{ route('users.index') }}>
+                                <button class='p-2 px-6 bg-orange-500 rounded-full'>Lihat Laporan</button>
                             </a>
                         </div>
                     @endif
@@ -51,55 +51,56 @@ if ($jam >= 0 && $jam < 12) {
         </div>
     
             
-            <div class="mt-10 me-1 dark:text-white text-black">
+            <div class="mt-10 me-1 dark:text-white text-black ">
                 <h1 class='font-medium text-2xl'>Info Dashboard Laporan</h1>
     
                 <div class="flex max-sm:flex-col lg:flex-row justify-between">
-                    <p class='py-3'>Dashboard informasi total laporan</p>
-                    @if(Auth::user()->role == 'admin')
+                    <p class="">Dashboard informasi total laporan</p>
+                    @if(Auth::user()->role == 'petugas')
                         <a href="">
-                            <button class='p-2 px-3 mt-1 bg-gray-300 rounded-full w-full text-black'>Kelola</button>
+                            <button class='p-2 px-3 bg-gray-300 rounded-full w-full text-black'>Kelola</button>
                         </a>
                     
     
-                    @elseif(Auth::user()->role == 'anggota')
-                    <a href="">
-                        <button class='p-2 px-3 mt-1 bg-gray-300 rounded-full w-full text-black'>Lihat Buku</button>
+                    @elseif(Auth::user()->role == 'user')
+                    <a href={{ route('users.index') }}>
+                        <button class='p-2 px-3 bg-gray-300 rounded-full w-full text-black'>Lihat Laporan</button>
                     </a>
                     @endif
                 </div>
     
     
                 <div class='flex mt-14 gap-5 justify-between text-black lg:flex-row flex-wrap'>
-                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-yellow-500 lg:w-72 lg:h-50 max-sm:w-44 max-sm:h-44 rounded-3xl shadow-md p-6">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-yellow-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
                         <p class="text-left font-semibold">Menunggu Diproses</p>
-                        <div class="flex flex-row items-center mt-4 gap-20">
-                            <span class="text-5xl font-bold mr-10">25</span>
-                            <i class="fa-solid fa-hourglass-half fa-3x"></i>
+                        <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
+                            <span class="text-5xl font-bold lg:mr-10">25</span>
+                            <i class="fa-solid fa-hourglass-half fa-2x"></i>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-blue-500 lg:w-72 lg:h-50 max-sm:w-44 max-sm:h-44 rounded-3xl shadow-md p-6">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-blue-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
                         <p class="text-left font-semibold">Sedang Diproses</p>
-                        <div class="flex flex-row items-center mt-4 gap-20">
-                            <span class="text-5xl font-bold mr-10">78</span>
-                            <i class="fa-solid fa-gear fa-3x"></i>
+                        <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
+                            <span class="text-5xl font-bold lg:mr-10">78</span>
+                            <i class="fa-solid fa-gear fa-2x"></i>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-green-500 lg:w-72 lg:h-50 max-sm:w-44 max-sm:h-44 rounded-3xl shadow-md p-6">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-green-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
                         <p class="text-left font-semibold">Laporan Selesai</p>
-                        <div class="flex flex-row items-center mt-4 gap-20">
-                            <span class="text-5xl font-bold mr-10">42</span>
-                            <i class="fa-solid fa-circle-check fa-3x"></i>
+                        <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
+                            <span class="text-5xl font-bold lg:mr-10">42</span>
+                            <i class="fa-solid fa-circle-check fa-2x"></i>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-red-500 lg:w-72 lg:h-50 max-sm:w-44 max-sm:h-44 rounded-3xl shadow-md p-6">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-red-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
                         <p class="text-left font-semibold">Laporan Ditolak</p>
-                        <div class="flex flex-row items-center mt-4 gap-20">
-                            <span class="text-5xl font-bold mr-10">11</span>
-                            <i class="fa-solid fa-xmark fa-3x"></i>
+                        <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
+                            <span class="text-5xl font-bold lg:mr-10">11</span>
+                            <i class="fa-solid fa-xmark fa-2x"></i>
                         </div>
                     </div>
                 </div>
+                
     
     
             </section>

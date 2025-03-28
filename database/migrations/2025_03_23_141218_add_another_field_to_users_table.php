@@ -17,6 +17,9 @@ return new class extends Migration
             $table->date('tanggal_lahir')->nullable();
             $table->string('gender')->nullable();
             $table->string('disabilitas')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('pekerjaan')->nullable();
+            $table->string('username')->nullable();
         });
     }
 

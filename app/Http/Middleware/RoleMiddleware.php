@@ -20,8 +20,8 @@ class RoleMiddleware
         if(Auth::check() && Auth::user()->role === $role) {
             return $next($request);
         }
-        $nama = Auth::user()->name;
         $role = Auth::user()->role;
-        abort(403, 'Halaman ini tidak dapat diakses oleh role '. $role);
+        // abort(403, "Halaman ini tidak dapat diakses oleh role $role");
+        abort(403);
     }
 }

@@ -27,6 +27,9 @@ class User extends Authenticatable
         'tanggal_lahir',
         'gender',
         'disabilitas',
+        'alamat',
+        'pekerjaan',
+        'username',
     ];
 
     /**

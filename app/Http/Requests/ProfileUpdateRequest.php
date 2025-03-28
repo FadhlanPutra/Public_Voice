@@ -20,8 +20,11 @@ class ProfileUpdateRequest extends FormRequest
             'nik' => ['required', 'string', 'max:20', 'regex:/^\d+$/'],
             'number_phone' => ['required', 'string', 'max:20', 'regex:/^\d+$/'],
             'tanggal_lahir' => ['required', 'date'], 
-            'gender' => ['required', 'string', 'in:a,b'], // Hanya opsi "a" dan "b"
-            'disabilitas' => ['required', 'string', 'in:ya,tidak'], // Hanya opsi "ya" dan "tidak"
+            'gender' => ['required', 'string', 'in:pria,wanita'],
+            'disabilitas' => ['required', 'string', 'in:ya,tidak'],
+            'alamat' => ['required', 'string', 'max:255'],
+            'pekerjaan' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
                 'string',

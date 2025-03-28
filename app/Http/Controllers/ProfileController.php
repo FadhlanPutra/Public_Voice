@@ -57,4 +57,11 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function setting(Request $request)
+    {
+        $user = Auth::user();
+        $tab = $request->get('tab', 'profile'); // Default ke 'profile' jika query tidak ada
+        return view('settings', compact('user', 'tab'));
+    }
 }

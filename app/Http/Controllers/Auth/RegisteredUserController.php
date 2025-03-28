@@ -33,12 +33,28 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'nik' => ['required', 'string', 'max:20', 'regex:/^\d+$/'],
+            'number_phone' => ['required', 'string', 'max:20', 'regex:/^\d+$/'],
+            'tanggal_lahir' => ['required', 'date'], 
+            'gender' => ['required', 'string', 'in:pria,wanita'],
+            'disabilitas' => ['required', 'string', 'in:ya,tidak'],
+            'alamat' => ['required', 'string', 'max:255'],
+            'pekerjaan' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255'],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'nik' => $request->nik,
+            'number_phone' => $request->number_phone,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'gender' => $request->gender,
+            'disabilitas' => $request->disabilitas,
+            'alamat' => $request->alamat,
+            'pekerjaan' => $request->pekerjaan,
+            'username' => $request->username,
         ]);
 
         event(new Registered($user));
