@@ -14,7 +14,7 @@
         </div>
     
         <div class="lg:w-full lg:py-10 h-full overflow-y-auto">
-            <a href="#" class="block w-full mb-8 p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div class="block w-full mb-8 p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div class="flex flex-row items-center gap-16 mb-4">
                     <div class="flex flex-row items-center gap-2 ">
                         <img src={{ asset('aset/icon/user.png') }} alt="User" class="rounded-full w-8 h-full">
@@ -41,13 +41,13 @@
                         <i class="fa-solid fa-thumbs-up"></i>
                         <p>&nbsp;0 Dukungan</p>
                     </div>
-                    <div class="flex flex-row items-center">
+                    <a href="#" class="flex flex-row items-center">
                         <i class="fa-solid fa-download"></i>
                         <p>&nbsp;Download Laporan</p>
-                    </div>
+                    </a>
                 </div>
-            </a>
-            <a href="#" class="block w-full mb-8 p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            </div>
+            <div class="block w-full mb-8 p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div class="flex flex-row items-center gap-16 mb-4">
                     <div class="flex flex-row items-center gap-2 ">
                         <img src={{ asset('aset/icon/user.png') }} alt="User" class="rounded-full w-8 h-full">
@@ -74,12 +74,12 @@
                         <i class="fa-solid fa-thumbs-up"></i>
                         <p>&nbsp;0 Dukungan</p>
                     </div>
-                    <div class="flex flex-row items-center">
+                    <a href="#" class="flex flex-row items-center">
                         <i class="fa-solid fa-download"></i>
                         <p>&nbsp;Download Laporan</p>
-                    </div>
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </x-app-layout>

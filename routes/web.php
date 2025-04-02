@@ -30,6 +30,7 @@ Route::group(['middleware' => ['auth', 'role:user']], function (){
 });
 
 Route::group(['middleware' => ['auth', 'role:petugas']], function (){
+    Route::get('petugas/history', [PetugasController::class, 'history'])->name('petugas.history');
     Route::resource('petugas', PetugasController::class);
 });
 

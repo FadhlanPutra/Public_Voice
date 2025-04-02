@@ -11,7 +11,7 @@ class PetugasController extends Controller
      */
     public function index()
     {
-        return view('petugas.index');
+        return view('petugas.daftar');
     }
     
     /**
@@ -19,7 +19,7 @@ class PetugasController extends Controller
      */
     public function create()
     {
-        return view('petugas.riwayat');
+
     }
 
     /**
@@ -43,7 +43,7 @@ class PetugasController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // return view('petugas.daftar');
     }
 
     /**
@@ -60,5 +60,10 @@ class PetugasController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function history()
+    {
+        return view('petugas.riwayat');
     }
 }

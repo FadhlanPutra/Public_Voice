@@ -28,6 +28,7 @@
         {{-- <link rel="icon" href="{{ asset('aset/buku.webp') }}" type="image/x-icon"> --}}
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
+        <meta name="theme-color" content="#FF2B00">
 
         <title>Public Voice {{ucfirst(Auth::user()->role)}}</title>
 

@@ -62,7 +62,44 @@
                     </div>
                 </div>
             </a>
-        
+            <a href="#" class="block max-w-md mb-10 p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Banjir Akibat Saluran Air Tersumbat</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Saya ingin melaporkan bahwa saluran air di Jalan Merdeka, RT 05 RW 03] mengalami penyumbatan dan menyebabkan banjir saat hujan turun. Air meluap ke jalan dan menggenangi rumah warga di sekitar.</p>
+
+                <div class="flex flex-row items-center gap-2 my-4">
+                    <img src={{ asset('aset/icon/user.png') }} alt="User" class="rounded-full w-8 h-full">
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Anonim</p>
+                </div>
+                <div class="flex flex-row justify-center gap-8 text-black dark:text-gray-300">
+                    <div class="flex flex-row items-center">
+                        <i class="fa-solid fa-comments"></i>
+                        <p>&nbsp;0 Komentar</p>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <p>&nbsp;0 Dukungan</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block max-w-md mb-10 p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Banjir Akibat Saluran Air Tersumbat</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Saya ingin melaporkan bahwa saluran air di Jalan Merdeka, RT 05 RW 03] mengalami penyumbatan dan menyebabkan banjir saat hujan turun. Air meluap ke jalan dan menggenangi rumah warga di sekitar.</p>
+
+                <div class="flex flex-row items-center gap-2 my-4">
+                    <img src={{ asset('aset/icon/user.png') }} alt="User" class="rounded-full w-8 h-full">
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Anonim</p>
+                </div>
+                <div class="flex flex-row justify-center gap-8 text-black dark:text-gray-300">
+                    <div class="flex flex-row items-center">
+                        <i class="fa-solid fa-comments"></i>
+                        <p>&nbsp;0 Komentar</p>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <p>&nbsp;0 Dukungan</p>
+                    </div>
+                </div>
+            </a>
         </div>
       </section>
 

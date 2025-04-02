@@ -12,8 +12,8 @@
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white text-black">Public Voice</span>
             </a>
             <div class="flex items-center lg:order-2">
-                <div class="relative mr-4">
-                    <select class="themed block px-8 py-2 text-sm border-gray-300 rounded-lg dark:bg-gray-700 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-orange-500 focus:border-orange-500">
+                <div class="relative lg:mr-4 hidden md:block">
+                    <select class="themed px-8 py-2 text-sm border-gray-300 rounded-lg dark:bg-gray-700 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-orange-500 focus:border-orange-500">
                         <option value="system" data-icon="fa-desktop">System</option>
                         <option value="light" data-icon="fa-sun">Light</option>
                         <option value="dark" data-icon="fa-moon">Dark</option>
@@ -22,8 +22,8 @@
                         <i class="fas " id="icon-display"></i>
                     </div>
                 </div>
-                <button data-modal-target="modal-Login" data-modal-toggle="modal-Login" type="button" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</button>
-                <button data-modal-target="modal-Register" data-modal-toggle="modal-Register" type="button" class="text-white bg-orange-500 hover:bg-orange-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Register</button>
+                <button data-modal-target="modal-Login" data-modal-toggle="modal-Login" type="button" class="hidden md:block text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-1 md:px-4 lg:px-5 py-2 lg:py-2.5 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</button>
+                <button data-modal-target="modal-Register" data-modal-toggle="modal-Register" type="button" class="hidden md:block text-white bg-orange-500 hover:bg-orange-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-1 md:px-4 lg:px-5 py-2 lg:py-2.5 md:mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Register</button>
                 <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>

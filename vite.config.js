@@ -5,7 +5,7 @@ export default defineConfig({
     plugins: [
         // tailwindcss(),
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/darkMode.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/darkMode.js', 'resources/js/navbarHighlight.js', 'resources/js/togglePassword.js'],
             refresh: true,
         }),
     ],

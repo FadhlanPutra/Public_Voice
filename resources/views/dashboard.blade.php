@@ -100,6 +100,7 @@ if ($jam >= 0 && $jam < 12) {
                         </div>
                     </div>
                 </div>
+            </div>
                 
     
     
