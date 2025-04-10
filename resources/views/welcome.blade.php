@@ -25,6 +25,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="{{ asset('aset/icon/public_voice.png') }}" type="image/x-icon" class="dark:hidden">
+    <link rel="icon" href="{{ asset('aset/icon/public_voice_dark.png') }}" type="image/x-icon" class="hidden dark:block">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="theme-color" content="#FF2B00">
     <title>Public Voice</title>
@@ -50,7 +52,7 @@
     @include('components.modal-handler-auth')
     
     <!-- Hero Section -->
-    <div class="flex flex-row items-center mb-10  mt-5 pt-20" id="beranda">
+    <div class="flex flex-row items-center mb-10 mx-5 mt-5 pt-20" id="beranda">
         <img src="aset/image1_welcome.png" loading="lazy" alt="background" class="hidden md:block w-1/2 h-auto rounded-md mb-6 mr-20">
         
         <div class="text-center w-50%">

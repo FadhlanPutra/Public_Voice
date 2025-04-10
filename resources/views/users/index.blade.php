@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="md2:pl-64 lg:pl-64 md:pl-64 mx-10 mt-4">
-        <div class="flex flex-row justify-between sticky top-0 bg-gray-100 dark:bg-gray-900 p-3 pt-6">
+        <div class="flex flex-row justify-between sticky top-0 bg-gray-100 dark:bg-gray-900 p-3 pt-6 z-50">
             <p class="text-black dark:text-white font-bold text-2xl">Daftar Laporan</p>
             <form class="flex flex-row items-center gap-3">
                 <label for="sort" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Sort by</label>

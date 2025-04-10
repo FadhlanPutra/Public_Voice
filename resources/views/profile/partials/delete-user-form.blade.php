@@ -1,5 +1,6 @@
 @vite(['resources/js/togglePassword.js'])
-<section class="space-y-6">
+
+<section class="space-y-6 pb-1">
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {{ __('Delete Account') }}
@@ -31,13 +32,13 @@
             <div class="mt-6">
                 <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
 
-                <div class="relative">
+                <div class="relative w-full">
                     <x-text-input
-                    id="password"
-                    name="password"
-                    type="password"
-                    class="mt-1 block w-3/4 password-input"
-                    placeholder="{{ __('Password') }}"
+                        id="password"
+                        name="password"
+                        type="password"
+                        class="mt-1 block w-full password-input"  {{-- Perbaikan: w-3/4 menjadi w-full --}}
+                        placeholder="{{ __('Password') }}"
                     />
                     <i class="fa fa-eye absolute right-3 top-3 cursor-pointer text-black dark:text-gray-200 toggle-password"></i>
                 </div>

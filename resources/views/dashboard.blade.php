@@ -70,36 +70,38 @@ if ($jam >= 0 && $jam < 12) {
                 </div>
     
     
-                <div class='flex mt-14 gap-5 justify-between text-black lg:flex-row flex-wrap'>
-                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-yellow-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14 text-black">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-yellow-500 rounded-3xl shadow-md p-6 w-full">
                         <p class="text-left font-semibold">Menunggu Diproses</p>
-                        <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
-                            <span class="text-5xl font-bold lg:mr-10">25</span>
-                            <i class="fa-solid fa-hourglass-half fa-2x"></i>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">25</span>
+                            <i class="fa-solid fa-hourglass-half text-3xl"></i>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-blue-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-blue-500 rounded-3xl shadow-md p-6 w-full">
                         <p class="text-left font-semibold">Sedang Diproses</p>
-                        <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
-                            <span class="text-5xl font-bold lg:mr-10">78</span>
-                            <i class="fa-solid fa-gear fa-2x"></i>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">78</span>
+                            <i class="fa-solid fa-gear text-3xl"></i>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-green-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-green-500 rounded-3xl shadow-md p-6 w-full">
                         <p class="text-left font-semibold">Laporan Selesai</p>
-                        <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
-                            <span class="text-5xl font-bold lg:mr-10">42</span>
-                            <i class="fa-solid fa-circle-check fa-2x"></i>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">42</span>
+                            <i class="fa-solid fa-circle-check text-3xl"></i>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-red-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-red-500 rounded-3xl shadow-md p-6 w-full">
                         <p class="text-left font-semibold">Laporan Ditolak</p>
-                        <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
-                            <span class="text-5xl font-bold lg:mr-10">11</span>
-                            <i class="fa-solid fa-xmark fa-2x"></i>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">11</span>
+                            <i class="fa-solid fa-xmark text-3xl"></i>
                         </div>
                     </div>
                 </div>
+                
             </div>
                 
     

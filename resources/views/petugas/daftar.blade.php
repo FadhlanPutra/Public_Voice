@@ -1,43 +1,43 @@
 <x-app-layout>
     <div class="md2:pl-64 lg:pl-64 md:pl-64 mx-10 mt-4 pb-10">
-        <div class="flex flex-row justify-between sticky top-0 bg-gray-100 dark:bg-gray-900 p-3 pt-6">
+        <div class="flex flex-row justify-between sticky top-0 bg-gray-100 dark:bg-gray-900 p-3 pt-6 z-50 -mx-10 pl-10">
             <p class="text-black dark:text-white font-bold text-2xl">Daftar Laporan Public Voice</p>
         </div>
         
-        <div class='grid mt-14 gap-1 justify-between text-black grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-            <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-yellow-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 mb-10 text-black">
+            <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-yellow-500 rounded-3xl shadow-md p-6 w-full">
                 <p class="text-left font-semibold">Menunggu Diproses</p>
-                <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
-                    <span class="text-5xl font-bold lg:mr-10">25</span>
-                    <i class="fa-solid fa-hourglass-half fa-2x"></i>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-4xl font-bold">25</span>
+                    <i class="fa-solid fa-hourglass-half text-3xl"></i>
                 </div>
             </div>
-            <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-blue-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
+            <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-blue-500 rounded-3xl shadow-md p-6 w-full">
                 <p class="text-left font-semibold">Sedang Diproses</p>
-                <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
-                    <span class="text-5xl font-bold lg:mr-10">78</span>
-                    <i class="fa-solid fa-gear fa-2x"></i>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-4xl font-bold">78</span>
+                    <i class="fa-solid fa-gear text-3xl"></i>
                 </div>
             </div>
-            <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-green-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
+            <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-green-500 rounded-3xl shadow-md p-6 w-full">
                 <p class="text-left font-semibold">Laporan Selesai</p>
-                <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
-                    <span class="text-5xl font-bold lg:mr-10">42</span>
-                    <i class="fa-solid fa-circle-check fa-2x"></i>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-4xl font-bold">42</span>
+                    <i class="fa-solid fa-circle-check text-3xl"></i>
                 </div>
             </div>
-            <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-red-500 lg:w-72 w-full sm:w-44 rounded-3xl shadow-md p-6">
+            <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-red-500 rounded-3xl shadow-md p-6 w-full">
                 <p class="text-left font-semibold">Laporan Ditolak</p>
-               <div class="flex flex-row items-center mt-4 gap-5 lg:gap-20">
-                    <span class="text-5xl font-bold lg:mr-10">11</span>
-                    <i class="fa-solid fa-xmark fa-2x"></i>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-4xl font-bold">11</span>
+                    <i class="fa-solid fa-xmark text-3xl"></i>
                 </div>
             </div>
         </div>
         
         <hr class="my-5 border-gray-700 dark:border-gray-200">
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-14 justify-start text-black">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 justify-start text-black">
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
                     <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-yellow-500 rounded-full p-2.5"></i>
@@ -240,6 +240,7 @@
                             <option value="belum">Belum di Proses</option>
                             <option value="sedang">Sedang di Proses</option>
                             <option value="selesai">Laporan Selesai</option>
+                            <option value="ditolak">Laporan Ditolak</option>
                         </select>
                     </div>
                     <!-- Modal footer -->

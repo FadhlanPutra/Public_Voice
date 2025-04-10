@@ -25,7 +25,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        {{-- <link rel="icon" href="{{ asset('aset/buku.webp') }}" type="image/x-icon"> --}}
+        <link rel="icon" href="{{ asset('aset/icon/public_voice.png') }}" type="image/x-icon" class="dark:hidden">
+        <link rel="icon" href="{{ asset('aset/icon/public_voice_dark.png') }}" type="image/x-icon" class="hidden dark:block">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
         <meta name="theme-color" content="#FF2B00">

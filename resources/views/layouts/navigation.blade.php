@@ -12,7 +12,8 @@
        <ul class="space-y-2">
 
         <div class="flex flex-row gap-4 mb-7">
-          {{-- <img src="/aset/buku.webp" class="w-1/6 h-1/6" alt="Logo Public Voice"> --}}
+          <img src="{{ asset('aset/icon/public_voice.png') }}" class="dark:hidden w-1/6 h-1/6" alt="Logo Public Voice">
+          <img src="{{ asset('aset/icon/public_voice_dark.png') }}" class="hidden dark:block w-1/6 h-1/6" alt="Logo Public Voice">
           <h1 class="dark:text-white text-black">Public Voice</h1>
         </div>
         

@@ -1,13 +1,13 @@
 <x-app-layout>
     <div class="md2:pl-64 lg:pl-64 md:pl-64 mx-10 mt-4">
-        <div class="flex flex-row justify-between sticky top-0 bg-gray-100 dark:bg-gray-900 p-3 pt-6">
+        <div class="flex flex-row justify-between sticky top-0 bg-gray-100 dark:bg-gray-900 p-3 pt-6 z-50 -mx-10 pl-10">
             <p class="text-black dark:text-white font-bold text-2xl text-center">Riwayat Laporan</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-14 justify-start text-black">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5 justify-start text-black">
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
-                    <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
                     <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
                 </div>
                 <div class="p-3">
@@ -22,7 +22,7 @@
             </div>
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
-                    <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
                     <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
                 </div>
                 <div class="p-3">
@@ -37,7 +37,7 @@
             </div>
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
-                    <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
                     <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
                 </div>
                 <div class="p-3">
@@ -52,7 +52,7 @@
             </div>
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
-                    <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
                     <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
                 </div>
                 <div class="p-3">
@@ -67,7 +67,7 @@
             </div>
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
-                    <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
                     <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
                 </div>
                 <div class="p-3">
@@ -82,7 +82,7 @@
             </div>
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
-                    <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
                     <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
                 </div>
                 <div class="p-3">
@@ -97,7 +97,7 @@
             </div>
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
-                    <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
                     <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
                 </div>
                 <div class="p-3">
@@ -112,7 +112,112 @@
             </div>
             <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                 <div class="relative">
-                    <i class="fa-solid fa-gear fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
+                </div>
+                <div class="p-3">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                    <button data-modal-target="riwayat-modal" data-modal-toggle="riwayat-modal" type="button" class="flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Detail Laporan
+                        <svg class="rtl:rotate-180 w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="relative">
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
+                </div>
+                <div class="p-3">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                    <button data-modal-target="riwayat-modal" data-modal-toggle="riwayat-modal" type="button" class="flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Detail Laporan
+                        <svg class="rtl:rotate-180 w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="relative">
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
+                </div>
+                <div class="p-3">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                    <button data-modal-target="riwayat-modal" data-modal-toggle="riwayat-modal" type="button" class="flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Detail Laporan
+                        <svg class="rtl:rotate-180 w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="relative">
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
+                </div>
+                <div class="p-3">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                    <button data-modal-target="riwayat-modal" data-modal-toggle="riwayat-modal" type="button" class="flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Detail Laporan
+                        <svg class="rtl:rotate-180 w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="relative">
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
+                </div>
+                <div class="p-3">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                    <button data-modal-target="riwayat-modal" data-modal-toggle="riwayat-modal" type="button" class="flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Detail Laporan
+                        <svg class="rtl:rotate-180 w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="relative">
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
+                </div>
+                <div class="p-3">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                    <button data-modal-target="riwayat-modal" data-modal-toggle="riwayat-modal" type="button" class="flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Detail Laporan
+                        <svg class="rtl:rotate-180 w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="relative">
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
+                    <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
+                </div>
+                <div class="p-3">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                    <button data-modal-target="riwayat-modal" data-modal-toggle="riwayat-modal" type="button" class="flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Detail Laporan
+                        <svg class="rtl:rotate-180 w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="relative">
+                    <i class="fa-solid fa-check fa-2x absolute -top-2 -right-2 text-black bg-green-500 rounded-full p-2.5"></i>
                     <img class="rounded-t-lg" src="{{ asset('aset/fff.png') }}" alt="Foto Bukti Laporan" />
                 </div>
                 <div class="p-3">
