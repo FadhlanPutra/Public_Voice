@@ -28,10 +28,10 @@
                             <div class="flex-grow border-t border-gray-300"></div>
                         </div>
                         <div class="flex justify-center my-4">
-                            <button type="button" class="flex gap-2 justify-center items-center text-center bg-gray-300 hover:text-white hover:bg-gray-600 w-full p-2 rounded-lg font-semibold text-xl">                        
-                            <img src={{ asset('aset/icon/google.png') }} alt="Logo Google" class="w-7 h-auto">
-                            Google
-                            </button>
+                            <a href="/auth/google" class="flex gap-2 justify-center items-center text-center bg-gray-300 hover:text-white hover:bg-gray-600 w-full p-2 rounded-lg font-semibold text-xl">  
+                                <img src={{ asset('aset/icon/google.png') }} alt="Logo Google" class="w-7 h-auto">
+                                Google
+                            </a>
                         </div>
 
                         <div class="flex items-center">
@@ -130,10 +130,10 @@
                             <div class="flex-grow border-t border-gray-300"></div>
                         </div>
                         <div class="flex justify-center my-4">
-                            <button type="button" class="flex gap-2 justify-center items-center text-center bg-gray-300 hover:text-white hover:bg-gray-600 w-full p-2 rounded-lg font-semibold text-xl">                        
-                            <img src={{ asset('aset/icon/google.png') }} alt="Logo Google" class="w-7 h-auto">
-                            Google
-                            </button>
+                            <a href="/auth/google" class="flex gap-2 justify-center items-center text-center bg-gray-300 hover:text-white hover:bg-gray-600 w-full p-2 rounded-lg font-semibold text-xl">  
+                                <img src={{ asset('aset/icon/google.png') }} alt="Logo Google" class="w-7 h-auto">
+                                Google
+                            </a>
                         </div>
 
                         <div class="flex items-center">

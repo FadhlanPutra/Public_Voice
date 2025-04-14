@@ -22,7 +22,7 @@ export default {
               },
 
               fontFamily: {
-                'body': [
+              'body': [
               'Inter', 
               'ui-sans-serif', 
               'system-ui', 
@@ -39,7 +39,7 @@ export default {
               'Segoe UI Symbol', 
               'Noto Color Emoji'
             ],
-                'sans': [
+              'sans': [
               'Inter', 
               'ui-sans-serif', 
               'system-ui', 

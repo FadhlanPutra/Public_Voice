@@ -11,28 +11,56 @@
    <div class="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
        <ul class="space-y-2">
 
-        <div class="flex flex-row gap-4 mb-7">
+        <div class="flex flex-row gap-4 items-center">
           <img src="{{ asset('aset/icon/public_voice.png') }}" class="dark:hidden w-1/6 h-1/6" alt="Logo Public Voice">
           <img src="{{ asset('aset/icon/public_voice_dark.png') }}" class="hidden dark:block w-1/6 h-1/6" alt="Logo Public Voice">
           <h1 class="dark:text-white text-black">Public Voice</h1>
         </div>
         
            <li>
-               <a href="{{ '/dashboard' }}" class="{{ Request::is('dashboard') ? 'bg-gray-200 dark:bg-gray-600' : 'hover:bg-gray-100 dark:hover:bg-gray-700' }} flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+               <a href="{{ '/dashboard' }}" class="{{ Request::is('dashboard') ? 'bg-gray-200 dark:bg-gray-600' : 'hover:bg-gray-100 dark:hover:bg-gray-700' }} mt-6 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                 <i class="fa-solid fa-chart-pie text-gray-400"></i>
                    <span class="ml-3">Dashboard</span>
                </a>
            </li>
            <li> 
-               <button type="button" class="{{ Request::is('users') || Request::is('users/create') || Request::is('petugas') ? 'bg-gray-200 dark:bg-gray-600' : 'hover:bg-gray-100 dark:hover:bg-gray-700' }} flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
-                    <i class="fa-solid fa-file-contract text-gray-400"></i>
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Laporan</span>
-                    <svg aria-hidden="false" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            <ul id="dropdown-pages" class="hidden py-2 space-y-2">
-                @if(Auth::user()->role == 'petugas')
+               
+               @if (Auth::user()->role == 'admin')
+                    <button type="button" class="{{ Request::is('admin') || Request::is('admin/pengaduan') || Request::is('admin/pengguna') || Request::is('admin/statistik') ? 'bg-gray-200 dark:bg-gray-600' : 'hover:bg-gray-100 dark:hover:bg-gray-700' }} flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+                        <i class="fa-solid fa-database text-gray-400"></i>
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Data</span>
+                        <svg aria-hidden="false" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                @else
+                    <button type="button" class="{{ Request::is('users') || Request::is('users/create') || Request::is('petugas') || Request::is('petugas/history') ? 'bg-gray-200 dark:bg-gray-600' : 'hover:bg-gray-100 dark:hover:bg-gray-700' }} flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+                        <i class="fa-solid fa-file-contract text-gray-400"></i>
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Laporan</span>
+                        <svg aria-hidden="false" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                @endif
+                <ul id="dropdown-pages" class="hidden py-2 space-y-2">
+                @if (Auth::user()->role == 'admin')
+                    <li class="{{ Request::is('admin') ? 'bg-gray-200 dark:bg-gray-700' : 'hover:bg-gray-100 dark:hover:bg-gray-800' }} flex items-center text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                        <a href="{{ route('admin.pengaduan') }}" class="flex items-center gap-3 pl-11 p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                            <i class="fa-solid fa-table-list text-gray-400"></i> 
+                            <p>Pengaduan</p>
+                        </a>
+                    </li>
+                    <li class="{{ Request::is('admin') ? 'bg-gray-200 dark:bg-gray-700' : 'hover:bg-gray-100 dark:hover:bg-gray-800' }} flex items-center text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                        <a href="{{ route('admin.pengguna') }}" class="flex items-center gap-3 pl-11 p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                            <i class="fa-solid fa-users text-gray-400"></i> 
+                            <p>Pengguna</p>
+                        </a>
+                    </li>
+                    <li class="{{ Request::is('admin') ? 'bg-gray-200 dark:bg-gray-700' : 'hover:bg-gray-100 dark:hover:bg-gray-800' }} flex items-center text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                        <a href="{{ route('admin.statistik') }}" class="flex items-center gap-3 pl-11 p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                            <i class="fa-solid fa-square-poll-vertical text-gray-400"></i> 
+                            <p>Statistik</p>
+                        </a>
+                    </li>
+                @elseif(Auth::user()->role == 'petugas')
                 <li class="{{ Request::is('petugas') ? 'bg-gray-200 dark:bg-gray-700' : 'hover:bg-gray-100 dark:hover:bg-gray-800' }} flex items-center text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                    <a href="{{ route('petugas.index') }}" class="flex items-center gap-3 pl-11 p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                    <a href="{{ route('petugas.laporan') }}" class="flex items-center gap-3 pl-11 p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
                         <i class="fa-solid fa-table-list text-gray-400"></i> 
                         <p>Daftar Laporan</p>
                     </a>
@@ -43,8 +71,7 @@
                         <p>Riwayat Laporan</p>
                     </a>
                 </li>
-                @endif
-                @if(Auth::user()->role == 'user')
+                @elseif(Auth::user()->role == 'user')
                 <li class="{{ Request::is('users') ? 'bg-gray-200 dark:bg-gray-700' : 'hover:bg-gray-100 dark:hover:bg-gray-800' }} flex items-center text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
                     <a href="{{ route('users.index') }}" class="flex items-center gap-3 pl-11 p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
                         <i class="fa-solid fa-table-list text-gray-400"></i> 

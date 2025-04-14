@@ -9,6 +9,17 @@
                     <div class="sm:col-span-2">
                         <input type="text" name="judul_laporan" id="judul_laporan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Judul laporan" required>
                     </div>
+                    <form class="max-w-sm mx-auto">
+                        <label for="countries" class="sr-only block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Kategory</label>
+                        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected disabled>Pilih Kategory</option>
+                          <option value="lingkungan">Sampah/Lingkungan</option>
+                          <option value="penerangan">Penerangan Jalan</option>
+                          <option value="air">Air Bersih</option>
+                          <option value="parkir">Parkir Liar</option>
+                          <option value="ketertiban">Keamanan/ketertiban</option>
+                        </select>
+                    </form>
                     <div class="relative w-full">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="false" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

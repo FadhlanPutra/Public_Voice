@@ -14,3 +14,19 @@ html {
     background-color: #1f2937;
     transition: background-color 0.3s ease;
 }
+
+@layer utilities {
+    .rounded-border-bottom {
+        position: relative;
+    }
+    .rounded-border-bottom::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: currentColor;
+        border-radius: 0 0 8px 8px; /* Rounded effect */
+    }
+}

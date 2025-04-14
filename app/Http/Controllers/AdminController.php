@@ -4,22 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PetugasController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // return view('petugas.daftar');
+        //
     }
-    
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -43,7 +43,7 @@ class PetugasController extends Controller
      */
     public function edit(string $id)
     {
-        // return view('petugas.daftar');
+        //
     }
 
     /**
@@ -62,13 +62,21 @@ class PetugasController extends Controller
         //
     }
 
-    public function history()
+    public function pengaduan(Request $request)
     {
-        return view('petugas.riwayat');
+        $tab = $request->get('tab', 'semua'); // Default ke 'semua' jika query tidak ada
+        return view('admin.pengaduan', compact('tab'));
     }
 
-    public function laporan()
+    public function pengguna(Request $request)
     {
-        return view('petugas.laporan');
+        $tab = $request->get('tab', 'admin'); // Default ke 'semua' jika query tidak ada
+        return view('admin.pengguna', compact('tab'));
+    }
+
+    public function statistik(Request $request)
+    {
+        $tab = $request->get('tab'); // Default ke 'semua' jika query tidak ada
+        return view('admin.statistik', compact('tab'));
     }
 }

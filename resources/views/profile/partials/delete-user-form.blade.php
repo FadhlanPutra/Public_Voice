@@ -7,7 +7,10 @@
         </h2>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
+            {{ __('Setelah akun Anda dihapus, semua sumber daya dan datanya akan dihapus secara permanen dari database kami.') }}
+        </p>
+        <p class="mt-1 text-sm text-red-600 dark:text-red-400">
+            {{ __('PERINGATAN! PROSES INI TIDAK DAPAT DIBATALKAN') }}
         </p>
     </header>
 
@@ -22,30 +25,53 @@
             @method('delete')
 
             <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                {{ __('Are you sure you want to delete your account?') }}
+                {{ __('Apakah Anda yakin ingin menghapus akun Anda?') }}
             </h2>
 
+            @if (Auth::user()->socialAccounts->isEmpty())
             <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
+                {{ __('Setelah akun Anda dihapus, semua sumber daya dan datanya akan dihapus secara permanen. Masukkan kata sandi Anda untuk mengonfirmasi bahwa Anda ingin menghapus akun Anda secara permanen.') }}
             </p>
-
+            @else
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                {{ __('Setelah akun Anda dihapus, semua sumber daya dan datanya akan dihapus secara permanen. Masukkan Email Anda untuk mengonfirmasi bahwa Anda ingin menghapus akun Anda secara permanen.') }}
+            </p>
+            @endif
+            
+            @if (Auth::user()->socialAccounts->isEmpty())
+                
             <div class="mt-6">
                 <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
-
+                
                 <div class="relative w-full">
                     <x-text-input
-                        id="password"
-                        name="password"
-                        type="password"
-                        class="mt-1 block w-full password-input"  {{-- Perbaikan: w-3/4 menjadi w-full --}}
-                        placeholder="{{ __('Password') }}"
+                    id="password"
+                    name="password"
+                    type="password"
+                    class="mt-1 block w-full password-input"
+                    placeholder="{{ __('Password') }}"
                     />
                     <i class="fa fa-eye absolute right-3 top-3 cursor-pointer text-black dark:text-gray-200 toggle-password"></i>
                 </div>
-
-                <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
+                
+                
             </div>
-
+            
+            @else
+            <x-input-label for="email" value="{{ __('email') }}" class="sr-only" />
+                
+            <div class="relative w-full">
+                <x-text-input
+                id="email"
+                name="email"
+                type="email"
+                class="mt-1 block w-full email-input"
+                placeholder="{{ __('Email') }}"
+                />
+            </div>
+            @endif
+            <x-input-error :messages="$errors->userDeletion->get('email')" class="mt-2" />
+            <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
             <div class="mt-6 flex justify-end">
                 <x-secondary-button x-on:click="$dispatch('close')">
                     {{ __('Cancel') }}

@@ -23,14 +23,21 @@ if ($jam >= 0 && $jam < 12) {
                         <h1 class='font-extrabold text-2xl'>Selamat {{$salam}}, {{ Auth::user()->name }}!</h1>
                         <p>Terima kasih telah menjadi bagian dari Public Voice. Peran Anda sangat penting dalam memastikan setiap pengaduan masyarakat dikelola dengan cepat, transparan, dan tepat sasaran. Gunakan panel admin ini untuk memantau, menanggapi, dan menindaklanjuti setiap laporan yang masuk.</p>
                     
-                    @if(Auth::user()->role == 'petugas')    
+                    @if(Auth::user()->role == 'admin')    
                         <div class='flex lg:gap-5 max-sm:justify-between'>
-                            <a href="">
+                            <a href="{{ route('admin.pengaduan') }}">
+                                <button href='#' class='p-2 px-6 bg-gray-300 rounded-full text-black'>Lihat Laporan</button>
+                            </a>
+                            <a href="{{ route('admin.statistik') }}">
+                                <button href='#' class='p-2 px-6 bg-orange-500 rounded-full'>Lihat Statistik</button>
+                            </a>
+                        </div>
+                    @elseif(Auth::user()->role == 'petugas')    
+                        <div class='flex lg:gap-5 max-sm:justify-between'>
+                            <a href="{{ route('petugas.laporan') }}">
                                 <button href='#' class='p-2 px-6 bg-gray-300 rounded-full text-black'>Lihat Laporan</button>
                             </a>
                         </div>
-                    
-    
                     @elseif(Auth::user()->role == 'user')
                         <div class='flex lg:gap-5 max-sm:justify-between'>
                             <a href={{ route('users.create') }}>
@@ -46,8 +53,6 @@ if ($jam >= 0 && $jam < 12) {
                     </div>
                 </div>
             </div>
-            
-            
         </div>
     
             
@@ -56,22 +61,36 @@ if ($jam >= 0 && $jam < 12) {
     
                 <div class="flex max-sm:flex-col lg:flex-row justify-between">
                     <p class="">Dashboard informasi total laporan</p>
-                    @if(Auth::user()->role == 'petugas')
-                        <a href="">
+                    @if(Auth::user()->role == 'admin')
+                        <a href="{{ route('admin.pengaduan') }}">
                             <button class='p-2 px-3 bg-gray-300 rounded-full w-full text-black'>Kelola</button>
                         </a>
-                    
-    
+                    @elseif(Auth::user()->role == 'petugas')
+                        <a href="{{ route('petugas.laporan') }}">
+                            <button class='p-2 px-3 bg-gray-300 rounded-full w-full text-black'>Kelola</button>
+                        </a>
                     @elseif(Auth::user()->role == 'user')
-                    <a href={{ route('users.index') }}>
-                        <button class='p-2 px-3 bg-gray-300 rounded-full w-full text-black'>Lihat Laporan</button>
-                    </a>
+                        <a href={{ route('users.index') }}>
+                            <button class='p-2 px-3 bg-gray-300 rounded-full w-full text-black'>Lihat Laporan</button>
+                        </a>
                     @endif
                 </div>
     
     
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14 text-black">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 mb-10 text-black">
+                @if(auth()->user()->role === 'admin')
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-5 mt-5 mb-10 text-black">
+
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-purple-500 rounded-3xl shadow-md p-6 w-full">
+                        <p class="text-left font-semibold">Semua Laporan</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">156</span>
+                            <i class="fa-solid fa-database text-3xl"></i>
+                        </div>
+                    </div>
+                    @endif
+
                     <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-yellow-500 rounded-3xl shadow-md p-6 w-full">
                         <p class="text-left font-semibold">Menunggu Diproses</p>
                         <div class="flex items-center justify-between mt-4">
@@ -102,7 +121,51 @@ if ($jam >= 0 && $jam < 12) {
                     </div>
                 </div>
                 
-            </div>
+                
+                @if(auth()->user()->role === 'admin')
+
+                <h1 class='font-medium text-2xl'>Info Data Pengguna</h1>
+    
+                <div class="flex max-sm:flex-col lg:flex-row justify-between">
+                    <p class="">Dashboard informasi data pengguna</p>
+                    <a href="{{ route('admin.pengguna') }}">
+                        <button class='p-2 px-3 bg-gray-300 rounded-full w-full text-black'>Kelola</button>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 pb-10 text-black">
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-purple-500 rounded-3xl shadow-md p-6 w-full">
+                        <p class="text-left font-semibold">Semua Laporan</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">156</span>
+                            <i class="fa-solid fa-database text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-yellow-500 rounded-3xl shadow-md p-6 w-full">
+                        <p class="text-left font-semibold">Menunggu Diproses</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">25</span>
+                            <i class="fa-solid fa-hourglass-half text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-blue-500 rounded-3xl shadow-md p-6 w-full">
+                        <p class="text-left font-semibold">Sedang Diproses</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">78</span>
+                            <i class="fa-solid fa-gear text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 dark:text-white border-b border-l-4 border-red-500 rounded-3xl shadow-md p-6 w-full">
+                        <p class="text-left font-semibold">Laporan Ditolak</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-4xl font-bold">11</span>
+                            <i class="fa-solid fa-xmark text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+                @endif
+                
+        </div>
                 
     
     

@@ -30,6 +30,10 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="theme-color" content="#FF2B00">
     <title>Public Voice</title>
+    <meta name="description" content="Public Voice adalah platform digital untuk pengaduan masyarakat yang memastikan pengelolaan laporan yang cepat, transparan, dan efektif, didukung oleh AI untuk memprioritaskan dan mengotomatiskan klasifikasi masalah.">
+    <meta name="keywords" content="Public Voice, pengaduan masyarakat, keterlibatan masyarakat, AI, machine learning, transparansi, teknologi sipil, pelaporan warga, platform digital">
+    <meta name="author" content="Tim Public Voice">
+    
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/darkMode.js', 'resources/js/navbarHighlight.js'])
@@ -43,16 +47,16 @@
         span {
             color: orange;
         }
-        </style>
+    </style>
 
 </head>
 
 <body id="themed" class="bg-gray-50 text-gray-800 dark:bg-gray-800">
-    @include('layouts.navbar')
-    @include('components.modal-handler-auth')
+    @include('layouts.navbar');
+    @include('components.modal-handler-auth');
     
     <!-- Hero Section -->
-    <div class="flex flex-row items-center mb-10 mx-5 mt-5 pt-20" id="beranda">
+    <div class="flex flex-row items-center mb-10 mx-5 pt-20" id="beranda">
         <img src="aset/image1_welcome.png" loading="lazy" alt="background" class="hidden md:block w-1/2 h-auto rounded-md mb-6 mr-20">
         
         <div class="text-center w-50%">
@@ -60,7 +64,7 @@
             <h4 class="text-lg font-semibold text-blue-500">Suara Anda, Perubahan Nyata!</h4>
             <p class="text-gray-600 mt-2 dark:text-gray-300">Public Voice adalah platform yang memungkinkan Anda untuk menyuarakan pendapat dan aspirasi Anda. Dengan Public Voice, Anda dapat memberikan masukan, saran, dan kritik terhadap kebijakan pemerintah, layanan publik, dan berbagai hal lainnya.</p>
 
-            <div class="flex flex-row items-center justify-center mt-6 space-x-4">
+            <div class="flex flex-row items-center pt- justify-center mt-6 space-x-4">
                 @if (Route::has('login'))
                     @auth
                         {{-- Tombol Dashboard jika user sudah login --}}

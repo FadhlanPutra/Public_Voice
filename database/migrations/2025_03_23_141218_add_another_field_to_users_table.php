@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('nik')->nullable();
-            $table->string('number_phone')->nullable();
+            $table->string('telp')->nullable();
             $table->date('tanggal_lahir')->nullable();
-            $table->string('gender')->nullable();
+            $table->string('jenis_kelamin')->nullable();
             $table->string('disabilitas')->nullable();
-            $table->string('alamat')->nullable();
+            $table->string('tempat_tinggal')->nullable();
             $table->string('pekerjaan')->nullable();
             $table->string('username')->nullable();
         });

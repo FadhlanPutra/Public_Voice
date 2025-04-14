@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -23,13 +24,19 @@ class User extends Authenticatable
         'password',
         'role',
         'nik',
-        'number_phone',
+        'telp',
         'tanggal_lahir',
-        'gender',
+        'jenis_kelamin',
         'disabilitas',
-        'alamat',
+        'tempat_tinggal',
         'pekerjaan',
         'username',
+
+        'user_id',
+        'provider_id',
+        'provider_name',
+        'provider_token',
+        'access_token'
     ];
 
     /**
@@ -54,8 +61,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    public function loans()
+    
+    /**
+    * @return \Illuminate\Database\Eloquent\Relations\HasMany
+    */
+    public function socialAccounts()
     {
-        // return $this->hasMany(pinjamBuku::class);
+      return $this->hasMany(SocialAccount::class);
     }
 }

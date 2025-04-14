@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
-use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Storage;
 
 class RegisteredUserController extends Controller
 {
@@ -29,30 +30,41 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        $user = Auth::user();
+
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'nik' => ['required', 'string', 'max:20', 'regex:/^\d+$/'],
-            'number_phone' => ['required', 'string', 'max:20', 'regex:/^\d+$/'],
-            'tanggal_lahir' => ['required', 'date'], 
-            'gender' => ['required', 'string', 'in:pria,wanita'],
-            'disabilitas' => ['required', 'string', 'in:ya,tidak'],
-            'alamat' => ['required', 'string', 'max:255'],
-            'pekerjaan' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
+            'nama' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:masyarakat,username,' . $user->id_masyarakat . ',id_masyarakat',
+            'telp' => 'nullable|string|max:15',
+            'foto' => 'nullable|image|max:2048', // Maks 2MB
+            'bio' => 'nullable|string',
+            'email' => 'required|email|unique:masyarakat,email,' . $user->id_masyarakat . ',id_masyarakat',
+            'tanggal_lahir' => 'nullable|date',
+            'jenis_kelamin' => 'nullable|in:Laki-laki,Perempuan',
+            'pekerjaan' => 'nullable|string|max:255',
+            'tempat_tinggal' => 'nullable|string',
         ]);
 
+        if ($request->hasFile('foto')) {
+            // Hapus foto lama jika ada
+            if ($user->foto) {
+                Storage::delete('public/' . $user->foto);
+            }
+
+            $fotoPath = $request->file('foto')->store('profile', 'public');
+            $user->foto = $fotoPath;
+        }
+
         $user = User::create([
-            'name' => $request->name,
+            'nama' => $request->nama,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'nik' => $request->nik,
-            'number_phone' => $request->number_phone,
+            'telp' => $request->telp,
             'tanggal_lahir' => $request->tanggal_lahir,
-            'gender' => $request->gender,
+            'jenis_kelamin' => $request->jenis_kelamin,
             'disabilitas' => $request->disabilitas,
-            'alamat' => $request->alamat,
+            'tempat_tinggal' => $request->tempat_tinggal,
             'pekerjaan' => $request->pekerjaan,
             'username' => $request->username,
         ]);
